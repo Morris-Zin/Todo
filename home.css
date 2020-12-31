@@ -1,0 +1,82 @@
+
+html {
+    overflow: hidden;
+}
+body {
+    background: linear-gradient(120deg,#000,#2cdfc7);
+}
+.image {
+   max-width: 250px;
+    height: 350px;
+    position: relative;
+    left: 800px;
+}
+.image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: transparent;
+}
+
+.notes img {
+  width: 50px;
+  animation: note 8s linear infinite;
+  z-index: -10000;
+}
+.notes {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    bottom: -70px;
+}
+@keyframes note {
+    0% {
+        transform: translateY(0)    ;
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.7;
+    }70% {
+        opacity: 0.9;
+    }100% {
+        transform: translateY(-80vh);
+        opacity: 0;
+    }
+}
+.notes img:nth-child(1) {
+    width: 20px;
+    animation-delay: 2s;
+}
+.notes img:nth-child(2) {
+    width: 35px;
+    animation-delay: 3s;
+}
+.notes img:nth-child(3) {
+    width: 15px;
+    animation-delay: 4s;
+}
+.notes img:nth-child(4) {
+    width: 28px;
+    animation-delay: 1s;
+}
+.notes img:nth-child(5) {
+    width: 20px;
+    animation-delay: 5s;
+}
+.notes img:nth-child(6) {
+    width: 23px;
+    animation-delay: 4s;
+}
+.notes img:nth-child(7) {
+    width: 19px;
+    animation-delay: 3s;
+}
+@media(max-width:720px) {
+    h1 {
+        font-size: 20px;
+        position: relative;
+        margin-right: 30px;
+    }
+}

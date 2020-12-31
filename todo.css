@@ -1,0 +1,319 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background: linear-gradient(120deg,#75be22,#2cdfc7);
+}
+h1 {
+    position: relative;
+    left: 20px;
+}
+header,form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 20vh;
+}
+form input,form button {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border:none;
+    background: white;
+}
+form button {
+    color:#e2c35d;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+form button:hover {
+    color:white;
+    background: #e2c35d;
+}
+.todo {
+    display: flex;
+}
+.todo-container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.todo-list {
+    list-style-type: none;
+    min-width: 30%;
+}
+.todo {
+    background: white;
+    color: black;
+    margin: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+.todo li {
+    flex: 1;
+}
+.trash-btn,.complete-btn {
+    background: #ff6f47;
+    color: white;
+    border:none;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.trash-btn:hover {
+    background: #ff3700;
+}
+.complete-btn {
+    background: rgb(21, 175, 21);    
+}
+.complete-btn:hover {
+    background: rgb(43, 206, 43);
+}
+.todo-item {
+    padding: 0 0.5rem;
+}
+.fa-trash,.fa-check {
+    pointer-events: none;
+}
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.0.4);
+}
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-shadow: none;
+    outline: none;
+    border: none;
+}
+.select {
+    margin: 1rem;
+    overflow: hidden;
+    position: relative;
+}
+select {
+    color: #ff6f47;
+    width: 10rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #ff6f47;
+    padding: 0.5rem;
+    pointer-events: none;
+    transition: 0.3s ease all;
+}
+.select:hover::after {
+    background: white;
+    color: #ff6f47;
+}
+.userName {
+    margin: auto;
+    width: 15%; 
+}
+
+.personName {
+    color: rgb(36, 32, 32);
+    padding: 0.4rem;
+    font-size: 1.5rem;
+    font-weight: auto;
+    font-family: 'Playfair Display', serif;
+}
+.btn {
+    border: none;
+    color: #ff6f47;
+    outline: none;
+    margin: 20px 50px;
+    padding: 0.5rem;
+    width: 150px;
+    cursor: pointer;
+    font-weight: lighter;
+    color: rgb(90, 88, 88);
+    background: white;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+.btn:hover {
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.4);
+    color: black;
+}
+
+.side-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 100vh;
+    background: linear-gradient(100deg,rgba(50, 170, 170,0.7),rgba(52, 59, 17, 0.6));
+    overflow: hidden;
+}
+.text {
+    height: 30%;
+}
+.side-bar h3 {
+    writing-mode:tb-rl;
+    margin: 20px 0;
+    letter-spacing: 2px;
+}
+.social-media {
+    justify-content: space-between;
+    writing-mode: vertical-lr;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+}
+.scoial-links {
+    width: 25px;
+    display: block;
+}
+@media(max-width:660px) {
+    body {
+        overflow: hidden;
+    }
+    h1 {
+        font-size: 22px;
+        margin-right: 50px;
+    }
+    .personName {
+        width: 200px;
+       height: 4vh;
+       position: relative;
+       right: 70px;
+       font-size: 16px;
+    }
+    .btn {
+        position: relative;
+        padding: 10px;
+        outline: none;
+        border: none;
+        background: whitesmoke;
+        margin-left: 18px;
+    }
+    .todo-input {
+        margin: 0px 20px 0px 20px;
+    }
+    .filter-todo {
+        font-size: 13px
+    }
+    form {
+        width: 100%;
+    }
+    .select {
+        display: none;
+    }
+    .side-bar {
+        width: 24px;
+        overflow: hidden;
+        border: 0.1px solid transparent;
+    }
+    .text {
+        height: 30%;
+    }
+    .text h3 {
+        font-size: 12px;
+    }
+    .social-media {
+        justify-content: space-around;
+        margin-bottom: 50px;
+        height: 50%;
+    }
+    .scoial-links {
+        width: 20px;
+    }
+}
+@media(max-width:1030px) {
+    h1 {
+    margin-right: 60px;
+    }
+    .personName {
+        position: relative;
+        right: 80px;
+        margin: -80px 0;
+        height: 4vh;
+    }
+    .btn {
+        position: relative;
+        right: 75px;
+    }
+}
+
+span {
+    color: rgb(73, 255, 45);
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+
+.tour {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    width: 180px;
+    height: 60px;
+    line-height: 40px;
+    text-align: center;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: rgb(13, 71, 5);
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    z-index: 1;
+    background: linear-gradient(90deg,#25ff25,#58f865,#00ffc8,#039cf4);
+    background-size: 300%;
+}
+.tour:hover {
+    animation: animate 8s linear infinite;
+}
+@keyframes animate {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 100%;
+    }
+}
+.tour::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    bottom: -5px;
+    left: -5px;
+    right: -5px;
+    filter: blur(20px);
+    background: linear-gradient(90deg,#25ff25,#58d3f8,#00ffc8,#25ff25);
+    z-index: -1;
+    border-radius: 40px ;
+    transition: 0.5s;
+    background-size: 400%;
+    opacity: 0;
+}
+.tour:hover::before {
+    filter: blur(20px);
+    opacity: 1;
+    animation: animate 8s linear infinite;
+}

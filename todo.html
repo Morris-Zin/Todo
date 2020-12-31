@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="todo.css">
+    <title>Mini ToDo App</title>
+</head>
+
+<body>
+    <header>
+        <h1>? todo list?</h1>
+    </header>
+    <div class="userName">
+        <input type="text" class="personName" id='personName'>
+        <button class="btn">Submit Your Name</button>
+    </div>
+    <form>
+        <input type="text" class="todo-input">
+        <button type="submit" class="todo-button">
+            <i class="fas fa-plus square"></i>
+        </button>
+        <div class="select">
+            <select name="todos" class="filter-todo">
+                <option value="all">All</option>
+                <option value="completed">Completed</option>
+                <option value="uncompleted">Uncompleted</option>
+            </select>
+        </div>
+    </form>
+    <div class="todo-container">
+        <ul class="todo-list"></ul>
+    </div>
+    <div class="side-bar">
+        <div class="text">
+            <h3>Wriiten by ?</h3>
+        </div>
+        <div class="social-media">
+            <a href="https://www.facebook.com/technofstvl/videos/208088787469434" target="_blank"><img src="images/fb.png.png" alt=""
+                    class="scoial-links"></a>
+            <a href="https://www.instagram.com/p/BPbAir6BwQv/" target="_blank"><img src="images/ig.png" alt="" class="scoial-links"></a>
+            <a href="https://twitter.com/danceofavarice/status/735441228079075329?s=20" target="_blank"><img src="images/twit.png" alt="" class="scoial-links"></a>
+        </div>
+    </div>
+    <script src="todo.js"></script>
+</body>
+
+</html>
